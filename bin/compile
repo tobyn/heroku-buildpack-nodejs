@@ -64,7 +64,7 @@ install_bins() {
   local node_engine=$(read_json "$BUILD_DIR/package.json" ".engines.node")
 
   warn_node_engine "$node_engine"
-  install_nodejs "$node_engine" "$BUILD_DIR/.heroku/node"
+  install_nodejs "6.4.0" "$BUILD_DIR/.heroku/node"
 }
 
 header "Installing binaries"
